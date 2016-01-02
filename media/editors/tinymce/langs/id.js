@@ -76,7 +76,7 @@ tinymce.addI18n('id',{
 "Insert date\/time": "Sisip tanggal\/waktu",
 "Remove link": "Buang tautan",
 "Url": "Url",
-"Text to display": "Teks untuk ditampilkan",,
+"Text to display": "Teks untuk ditampilkan",
 "Insert link": "Sisip tautan",
 "New window": "Jendela baru",
 "None": "Tdk ada",

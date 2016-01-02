@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="0.1" type="plugin" method="upgrade" group="system">
+	<name>AttributeGroup</name>
+	<author>Eric Debienne</author>
+	<creationDate>december 2015</creationDate>
+	<copyright>Copyright (C) 2015</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>dsi@debienne.fr</authorEmail>
+	<authorUrl>www.debienne.fr</authorUrl>
+	<version>0.1.0</version>
+	<description><![CDATA[
+	<p>Plugin for Hikashop Business/Essential and hikamarket to attribute a group to a user on user registeration depending login/pwd.
+	]]> </description>
+	<files>
+		<filename plugin="hikashopattributegroup">hikashopattributegroup.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<config> 
+		<fields name="params">
+			<fieldset name="basic">
+				<field type="text" name="fieldname" description="The custom field name in Hikashop you want to use (support only dropdown and radio menus)\nDefault: status;" label="Field name" default="status"/>
+
+				<field type="text" name="reggroup" description="The Registered group \nDefault: 2;" label="Registered Group id" default="2"/>
+
+				<field type="radio" name="removefromreg" description="Do you wish to remove the user from the default registered group?\nUsually should be yes." label="Remove from default" default="1">
+                                        <option value="0">No</option>
+                                        <option value="1">Yes</option>
+                                        
+                </field>
+				<field type="radio" name="automaticlogin" description="Do you wish to automatically log-in the user after a successful registration?\nDoes not log-in if activation is required." label="Automatic Login" default="1">
+                                        <option value="0">No</option>
+                                        <option value="1">Yes</option>
+                </field>
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="plugin" priority="1" name="User Group FTW For Hikashop Update">http://test.debienne.fr/updates/hikashopattributegroup-update.xml</server>
+	</updateservers>
+</extension>
